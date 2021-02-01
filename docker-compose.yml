@@ -1,0 +1,27 @@
+version: '2'
+services:
+    mysql:
+        container_name: mysql
+        build: ./docker/db
+        environment:
+            - MYSQL_DATABASE=db1
+            - MYSQL_ROOT_USER=root
+            - MYSQL_PASSWORD=mysql           
+            - MYSQL_ROOT_PASSWORD=mysql
+        volumes:
+            - ./docker/db/data:/var/lib/mysql
+            - ./docker/db/sql:/docker-entrypoint-initdb.d
+        ports:
+            - "3306:3306"
+
+    apache-php:
+        container_name: php
+        build: ./docker/php
+        ports:
+            - "80:80"
+        volumes:
+            - ./src:/var/www/html
+        links:
+            - 'mysql'
+
+

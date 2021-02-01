@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<FORM METHOD="post" ACTION="kantan_select.php">
+メッセージを表示します<BR>
+<INPUT TYPE="submit" VALUE="メッセージ表示">
+</FORM>
+<br>
+<hr>
+
+<FORM  METHOD="post" ACTION="kantan_insert.php">
+名前を入力して<INPUT TYPE="text" NAME="a1"><BR>
+メッセージを入力して<INPUT TYPE="text" NAME="a2" SIZE=150><BR>
+<INPUT TYPE="submit" VALUE="メッセージ送信">
+</FORM>
+<br>
+<hr>
+<FORM METHOD="post" ACTION="kantan_delete.php">
+削除する番号を入力して<INPUT TYPE="text" NAME="b1"><BR>
+<INPUT TYPE="submit" VALUE="削除番号送信">
+</FORM>
+<br>
+<hr>
+<FORM METHOD="post" ACTION="kantan_search.php">
+検索のキーワードを入力して<INPUT TYPE="text" NAME="c1"><BR>
+<INPUT TYPE="submit" VALUE="検索">
+</FORM>
+<br>
+<hr>
+<FORM  METHOD="post" ACTION="kantan_update.php">
+番号を入力して<INPUT TYPE="text" NAME="u1"><BR>
+変更する名前を入力して<INPUT TYPE="text" NAME="u2"><BR>
+<INPUT TYPE="submit" VALUE="名前変更">
+</FORM>
+
+
+</body>
+</html>
