@@ -1,4 +1,6 @@
-create table IF not exists tbt
+DROP TABLE IF EXISTS tbt;
+
+create table tbt
 (
  id INT(20) PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(20),
