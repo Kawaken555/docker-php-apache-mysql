@@ -13,6 +13,7 @@ services:
             - ./docker/db/sql:/docker-entrypoint-initdb.d
         ports:
             - "3306:3306"
+        restart: always
 
     apache-php:
         container_name: php
@@ -23,5 +24,6 @@ services:
             - ./src:/var/www/html
         links:
             - 'mysql'
+        restart: always
 
 
