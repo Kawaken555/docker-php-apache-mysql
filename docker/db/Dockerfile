@@ -1,4 +1,4 @@
-FROM mysql:8.0.17
+FROM mysql:latest
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
   locales \
