@@ -1,11 +1,12 @@
-FROM mysql:latest
+FROM mysql:8.0.17
 
-RUN apt-get update && apt-get install --no-install-recommends -y \
+RUN apt-get update && apt-get install -y \
   locales \
   && apt-get autoremove -y \
-  && rm -rf /var/lib/apt/lists/* \
-  && sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen \
-  && locale-gen 
+  && rm -rf /var/lib/apt/lists/*
+
+RUN sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen \
+  && locale-gen
 
 ENV LANG ja_JP.UTF-8
 
