@@ -8,16 +8,13 @@ $dbh = new PDO($dsn, $user, $password);
 
 $sql = 'select * from tbt';
 $stmt = $dbh->query($sql);
-	 
-while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
+
+while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	print($result['id']);
 	print " : ";
 	print($result['name']);
 	print " : ";
-	print($result['mess'].'<br>');
+	print($result['mess'] . '<br>');
 }
-	 
-$dbh =NULL;
-	 
- ?>
-	 
+
+$dbh = NULL;
