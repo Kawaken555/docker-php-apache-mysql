@@ -6,7 +6,7 @@ services:
         environment:
             - MYSQL_DATABASE=db1
             - MYSQL_ROOT_USER=root
-            - MYSQL_PASSWORD=mysql           
+            - MYSQL_PASSWORD=mysql
             - MYSQL_ROOT_PASSWORD=mysql
         volumes:
             - ./docker/db/data:/var/lib/mysql
@@ -23,5 +23,3 @@ services:
             - ./src:/var/www/html
         links:
             - 'mysql'
-
-
